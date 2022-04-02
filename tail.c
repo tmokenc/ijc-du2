@@ -179,7 +179,7 @@ int tail_top(struct Arguments *args) {
     
     while ((res = read_line(buffer, args->input)) == EOF || count++ <= args->n) {
         if (res == OVER_LINE_LIMIT && !printed_line_over_error) {
-            fprintf(stderr, "Waring: a line get over the %d limit", LINE_MAX);
+            fprintf(stderr, "Warning: a line get over the %d limit", LINE_MAX);
             printed_line_over_error = true;
         }
         
@@ -206,7 +206,7 @@ int tail(struct Arguments *args) {
     
     while((res = read_line(buffer, args->input)) != EOF) {
         if (res == OVER_LINE_LIMIT && !printed_line_over_error) {
-            fprintf(stderr, "Waring: a line get over the %d limit", LINE_MAX);
+            fprintf(stderr, "Warning: a line get over the %d limit", LINE_MAX);
             printed_line_over_error = true;
         }
         
