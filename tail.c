@@ -1,6 +1,6 @@
 /**
  * tail.c
- * Řešení IJC-DU2, 21.3.2022
+ * Řešení IJC-DU2, 2. 4. 2022
  * Autor: tmokenc, FIT
  * Přeloženo: gcc 11.2
  *
