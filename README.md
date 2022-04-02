@@ -1,3 +1,14 @@
+# VUT-FIT-JIC-DU2
+
+## Todo
+- [x] tail.c
+- [ ] htab.h
+- [ ] htab.c
+- [ ] io.h
+- [ ] wordcount.c
+
+# Assignment
+```
 Jazyk C                       DU2                      22.3.2022
 ----------------------------------------------------------------
 
@@ -331,3 +342,4 @@ Obecné pokyny pro vypracování domácích úkolů
 * Opsané úkoly budou hodnoceny 0 bodů pro všechny zůčastněné
   a to bez výjimky (+ bonus v podobě návštěvy u disciplinární komise).
 
+```
