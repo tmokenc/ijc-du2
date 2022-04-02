@@ -1,4 +1,18 @@
-// https://www.unix.com/man-page/POSIX/1posix/tail/
+/**
+ * tail.c
+ * Řešení IJC-DU2, 21.3.2022
+ * Autor: tmokenc, FIT
+ * Přeloženo: gcc 11.2
+ *
+ * The program mimic some of the [POSIX tail](https://www.unix.com/man-page/POSIX/1posix/tail/)
+ * 
+ * Example
+ *   ./tail file         # output the last 10 lines of the `file`
+ *   ./tail -n 5 file    # output the last 5 lines of the `file`
+ *   ./tail -n +5 file   # output the first 5 lines of the `files`
+ *   ./tail              # output the last 10 lines from the `stdin`
+ *   ./tail -n +20       # output the first 20 lines from the `stdin`
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
