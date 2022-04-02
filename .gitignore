@@ -1,5 +1,7 @@
 # Compiled program
 tail
+wordcount
+wordcount-
 
 # Prerequisites
 *.d
