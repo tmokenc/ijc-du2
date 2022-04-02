@@ -12,8 +12,7 @@
 // 1 for the '\n' and 1 for the '\0', means we need 2 more bytes
 #define C_STR_LEN (LINE_MAX + 2)
 
-// Errors
-// Design choice, these equals 
+// Error codes
 #define TOO_MANY_ARGUMENTS 1
 #define INVALID_ARGUMENT   2
 #define UNKNOWN_PARAMETER  3
