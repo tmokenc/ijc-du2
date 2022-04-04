@@ -3,7 +3,7 @@
 ## Todo
 - [x] tail.c
 - [ ] htab
-    - [ ] htab.h
+    - [x] htab.h
     - [ ] htab.c 
 - [x] io
     - [x] io.h
