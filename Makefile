@@ -17,3 +17,6 @@ wordcount: wordcount.c
 
 wordcount-: wordcount-.cc
 	g++ $(CPP_FLAGS) -O2 -o wordcount- wordcount-.cc
+	
+io.o: io.h io.c
+	gcc $(C_FLAGS) -c -o io.o io.c
