@@ -2,9 +2,13 @@
 
 ## Todo
 - [x] tail.c
-- [ ] htab.h
-- [ ] htab.c
-- [ ] io.h
+- [ ] htab
+    - [ ] htab.h
+    - [ ] htab.c 
+- [ ] io
+    - [x] io.h
+    - [x] io.c
+        - [ ] What happens when `char *s` is `NULL`
 - [ ] wordcount.c
 
 # Assignment
