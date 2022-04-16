@@ -14,7 +14,8 @@
     - [ ] htab_resize
     - [x] htab_erase
     - [x] htab_find
-    - [ ] htab\_for_each
+    - [x] htab\_for_each
+        - Need to make the function parameter as read only
 - [x] io
     - [x] io.h
     - [x] io.c
