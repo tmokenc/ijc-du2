@@ -20,6 +20,7 @@
     - [x] io.c
         - What happens when `char *s` is `NULL`?
 - [ ] wordcount.c
+- [ ] Makefile
 
 **Note**: Haven't tested a single line of code for the `htab` yet
 
