@@ -5,11 +5,23 @@
 - [ ] htab
     - [x] htab.h
     - [ ] htab.c 
+    - [x] htab\_bucket_count
+    - [x] htab_size
+    - [x] htab_clear
+    - [x] htab_free
+    - [x] htab_init
+    - [x] htab\_lookup_add
+    - [ ] htab_resize
+    - [ ] htab_erase
+    - [ ] htab_find
+    - [ ] htab\_for_each
 - [x] io
     - [x] io.h
     - [x] io.c
         - What happens when `char *s` is `NULL`?
 - [ ] wordcount.c
+
+**Note**: Haven't tested a single line of code for the `htab` yet
 
 # Assignment
 ```
