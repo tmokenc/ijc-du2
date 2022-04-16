@@ -12,8 +12,8 @@
     - [x] htab_init
     - [x] htab\_lookup_add
     - [ ] htab_resize
-    - [ ] htab_erase
-    - [ ] htab_find
+    - [x] htab_erase
+    - [x] htab_find
     - [ ] htab\_for_each
 - [x] io
     - [x] io.h
