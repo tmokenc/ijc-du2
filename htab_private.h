@@ -13,13 +13,12 @@
 struct htab {
     size_t size; // aktuální počet záznamů [(key,data),next]
     size_t arr_size; // velikost pole ukazatelů (počet položek)
-    struct arr_ptr *array[]; // ukazatel na dynamicky alokované pole ukazatelů
+    struct htab_item *arr_ptr[]; // ukazatel na dynamicky alokované pole ukazatelů
 };
 
 struct htab_item {
-    char *key; // Klic daneho zaznamu.
-    int data; // Pocet zaznamu vazajicich se k danemu klici.
-    struct htab_item *next; // Ukazatel na dalsi polozku seznamu.
+    htab_pair        value;
+    struct htab_item *next; // pointer to the next item
 };
 
 #endif
