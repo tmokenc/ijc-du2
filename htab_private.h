@@ -17,7 +17,7 @@ struct htab {
 };
 
 struct htab_item {
-    htab_pair        value;
+    htab_pair_t *pair;
     struct htab_item *next; // pointer to the next item
 };
 
