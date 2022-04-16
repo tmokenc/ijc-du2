@@ -55,9 +55,9 @@ htab_pair_t * htab_lookup_add(htab_t * t, htab_key_t key) {
     }
     
     // if it cannot find the value, add new one
-    t->arr_ptr[idx] = create_item(key);
+    item_ptr = create_item(key);
     
-    if (t->arr_ptr[idx] == NULL) {
+    if (item_ptr == NULL) {
         fprintf(stderr, "Out Of Memory");
         return NULL;
     }
