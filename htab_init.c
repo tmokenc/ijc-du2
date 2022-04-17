@@ -23,18 +23,18 @@ htab_t *htab_init(size_t n) {
         return NULL;
     }
     
-    data.size = 0;
-    data.arr_size = n;
-    data.arr_ptr = malloc(sizeof(struct htab_item *) * n);
+    data->size = 0;
+    data->arr_size = n;
+    data->arr_ptr = malloc(sizeof(struct htab_item *) * n);
     
-    if (data.arr_ptr == NULL) {
+    if (data->arr_ptr == NULL) {
         fprintf(stderr, "Out Of Memory");
         free(data);
         return NULL;
     }
     
     for (size_t i = 0; i < n; i++) {
-        data.arr_ptr[i] = NULL;
+        data->arr_ptr[i] = NULL;
     }
     
     return data;

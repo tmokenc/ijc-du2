@@ -13,7 +13,7 @@
 struct htab {
     size_t size; // aktuální počet záznamů [(key,data),next]
     size_t arr_size; // velikost pole ukazatelů (počet položek)
-    struct htab_item *arr_ptr[]; // ukazatel na dynamicky alokované pole ukazatelů
+    struct htab_item **arr_ptr; // ukazatel na dynamicky alokované pole ukazatelů
 };
 
 struct htab_item {

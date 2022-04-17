@@ -5,6 +5,7 @@
  * Přeloženo: gcc 11.2
  */
  
+#include <stdlib.h>
 #include "htab.h"
  
 void htab_free(htab_t * t) {

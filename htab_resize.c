@@ -17,9 +17,9 @@ void htab_destroy(htab_t *t) {
             continue;
         }
         
-        htab_item *ptr = t->arr_ptr[i];
+        struct htab_item *ptr = t->arr_ptr[i];
         while (ptr != NULL) {
-            htab_item *next = ptr->next;
+            struct htab_item *next = ptr->next;
             free(ptr);
             ptr = next;
         }
@@ -42,11 +42,11 @@ void htab_resize(htab_t *t, size_t newn) {
             continue;
         }
         
-        htab_item *ptr = t->arr_ptr[i];
+        struct htab_item *ptr = t->arr_ptr[i];
         
         while (ptr != NULL) {
             size_t nidx = htab_hash_function(ptr->pair->key) % newn;
-            htab_item *item = malloc(sizeof(htab_item));
+            struct htab_item *item = malloc(sizeof(struct htab_item));
             
             if (item == NULL) {
                 htab_destroy(new_htab);
@@ -59,7 +59,7 @@ void htab_resize(htab_t *t, size_t newn) {
             if (new_htab->arr_ptr[nidx] == NULL) {
                 new_htab->arr_ptr[nidx] = item;
             } else {
-                htab_item *n = new_htab->arr_ptr[nidx];
+                struct htab_item *n = new_htab->arr_ptr[nidx];
                 
                 while (n->next != NULL) {
                     n = n->next;
