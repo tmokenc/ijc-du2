@@ -4,14 +4,14 @@
 - [x] tail.c
 - [ ] htab
     - [x] htab.h
-    - [ ] htab.c 
+    - [ ] ~~htab.c~~
     - [x] htab\_bucket_count
     - [x] htab_size
     - [x] htab_clear
     - [x] htab_free
     - [x] htab_init
     - [x] htab\_lookup_add
-    - [ ] htab_resize
+    - [x] htab_resize
     - [x] htab_erase
     - [x] htab_find
     - [x] htab\_for_each
