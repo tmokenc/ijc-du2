@@ -11,7 +11,7 @@
 #include "htab_private.h"
 
 htab_t *htab_init(size_t n) {
-    if (n == 1) {
+    if (n == 0) {
         fprintf(stderr, "n have to be at least 1");
         return NULL;
     }
