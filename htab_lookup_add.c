@@ -57,7 +57,7 @@ htab_pair_t * htab_lookup_add(htab_t * t, htab_key_t key) {
     
     struct htab_item *item_ptr = t->arr_ptr[idx];
     
-    while (item_ptr->next != NULL) {
+    while (item_ptr != NULL) {
         if (strcmp(key, item_ptr->pair->key) == 0) {
             item_ptr->pair->value++;
             return item_ptr->pair;
