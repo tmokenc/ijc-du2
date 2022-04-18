@@ -2,9 +2,8 @@
 
 ## Todo
 - [x] tail.c
-- [ ] htab
+- [x] htab
     - [x] htab.h
-    - [ ] ~~htab.c~~
     - [x] htab\_bucket_count
     - [x] htab_size
     - [x] htab_clear
@@ -20,10 +19,10 @@
     - [x] io.h
     - [x] io.c
         - What happens when `char *s` is `NULL`?
-- [ ] wordcount.c
+- [x] wordcount.c
 - [ ] Makefile
-
-**Note**: Haven't tested a single line of code for the `htab` yet
+    - [x] static htab library build 
+    - [ ] dynamic htab library build 
 
 # Assignment
 ```
