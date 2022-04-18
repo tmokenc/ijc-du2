@@ -13,7 +13,7 @@ tail: tail.c
 	gcc $(C_FLAGS) -o $@ $<
 	
 wordcount: wordcount.c io.o libhtab.a
-	gcc $(C_FLAGS) -L. -lhtab -o $@ wordcount.c io.o
+	gcc $(C_FLAGS) -static -o $@ $^
 
 wordcount-: wordcount-.cc
 	g++ $(CPP_FLAGS) -O2 -o $@ 
@@ -25,7 +25,7 @@ io.o: io.c io.h
 
 # static build
 libhtab.a: htab_hash_function.o htab_init.o htab_free.o htab_clear.o htab_resize.o htab_size.o htab_bucket_count.o htab_lookup_add.o htab_for_each.o
-	ar rcs $@ $?
+	ar -rcs $@ $^
 
 htab_hash_function.o: htab_hash_function.c htab_private.h
 	gcc $(CFLAGS) -c $<

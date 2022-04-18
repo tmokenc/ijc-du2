@@ -17,7 +17,7 @@ void htab_clear(htab_t * t) {
     for (size_t i = 0; i < t->arr_size; i++) {
         while (t->arr_ptr[i] != NULL) {
             struct htab_item *ptr = t->arr_ptr[i];
-            free(ptr->pair->key);
+            free((void *)ptr->pair->key);
             free(ptr->pair);
             free(ptr);
             t->arr_ptr[i] = ptr->next;
