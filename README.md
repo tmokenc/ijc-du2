@@ -20,9 +20,9 @@
     - [x] io.c
         - What happens when `char *s` is `NULL`?
 - [x] wordcount.c
-- [ ] Makefile
-    - [x] static htab library build 
-    - [ ] dynamic htab library build 
+- [x] Makefile
+    - [x] static build 
+    - [x] dynamic build 
 
 # Assignment
 ```

@@ -7,13 +7,16 @@
 C_FLAGS = -std=c11 -pedantic -Wall -Wextra
 CPP_FLAGS = -std=c++17 -pedantic -Wall
 
-all: tail wordcount
+all: tail wordcount wordcount-dynamic
 
 tail: tail.c
 	gcc $(C_FLAGS) -o $@ $<
 	
 wordcount: wordcount.c io.o libhtab.a
 	gcc $(C_FLAGS) -static -o $@ $^
+	
+wordcount-dynamic: wordcount.c io.o libhtab.so
+	gcc $(C_FLAGS) -L. -lhtab -o $@ wordcount.c io.o
 
 wordcount-: wordcount-.cc
 	g++ $(CPP_FLAGS) -O2 -o $@ 
@@ -47,3 +50,25 @@ htab_for_each.o: htab_for_each.c htab_private.h
 	gcc $(C_FLAGS) -c $<
 
 # dynamic
+
+libhtab.so: htab_hash_function-dyn.o htab_init-dyn.o htab_free-dyn.o htab_clear-dyn.o htab_resize-dyn.o htab_size-dyn.o htab_bucket_count-dyn.o htab_lookup_add-dyn.o htab_for_each-dyn.o
+	gcc $(C_FLAGS) -shared -o $@ $^
+
+htab_hash_function-dyn.o: htab_hash_function.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@
+htab_init-dyn.o: htab_init.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@
+htab_free-dyn.o: htab_free.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@  
+htab_clear-dyn.o: htab_clear.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@
+htab_resize-dyn.o: htab_resize.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@
+htab_size-dyn.o: htab_size.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@
+htab_bucket_count-dyn.o: htab_bucket_count.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@
+htab_lookup_add-dyn.o: htab_lookup_add.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@
+htab_for_each-dyn.o: htab_for_each.c htab_private.h
+	gcc $(C_FLAGS) -c -fPIC $< -o $@
