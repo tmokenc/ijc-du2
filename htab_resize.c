@@ -69,10 +69,10 @@ void htab_resize(htab_t *t, size_t newn) {
             }
             
             ptr = ptr->next;
-            new_htab->size++;
         }
     }
     
+    new_htab->size = t->size;
     htab_destroy(t);
     t = new_htab;
 }
