@@ -38,10 +38,6 @@ void htab_resize(htab_t *t, size_t newn) {
     if (new_htab == NULL) return;
     
     for (size_t i = 0; i < t->arr_size; i++) {
-        if (t->arr_ptr[i] == NULL) {
-            continue;
-        }
-        
         struct htab_item *ptr = t->arr_ptr[i];
         
         while (ptr != NULL) {
@@ -73,6 +69,7 @@ void htab_resize(htab_t *t, size_t newn) {
     }
     
     new_htab->size = t->size;
-    htab_destroy(t);
+    htab_t *tmp = t;
     t = new_htab;
+    htab_destroy(tmp);
 }
