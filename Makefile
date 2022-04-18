@@ -28,22 +28,22 @@ libhtab.a: htab_hash_function.o htab_init.o htab_free.o htab_clear.o htab_resize
 	ar -rcs $@ $^
 
 htab_hash_function.o: htab_hash_function.c htab_private.h
-	gcc $(CFLAGS) -c $<
+	gcc $(C_FLAGS) -c $<
 htab_init.o: htab_init.c htab_private.h
-	gcc $(CFLAGS) -c $<
+	gcc $(C_FLAGS) -c $<
 htab_free.o: htab_free.c htab_private.h
-	gcc $(CFLAGS) -c $<   
+	gcc $(C_FLAGS) -c $<   
 htab_clear.o: htab_clear.c htab_private.h
-	gcc $(CFLAGS) -c $<
+	gcc $(C_FLAGS) -c $<
 htab_resize.o: htab_resize.c htab_private.h
-	gcc $(CFLAGS) -c $<
+	gcc $(C_FLAGS) -c $<
 htab_size.o: htab_size.c htab_private.h
-	gcc $(CFLAGS) -c $<
+	gcc $(C_FLAGS) -c $<
 htab_bucket_count.o: htab_bucket_count.c htab_private.h
-	gcc $(CFLAGS) -c $<
+	gcc $(C_FLAGS) -c $<
 htab_lookup_add.o: htab_lookup_add.c htab_private.h
-	gcc $(CFLAGS) -c $<
+	gcc $(C_FLAGS) -c $<
 htab_for_each.o: htab_for_each.c htab_private.h
-	gcc $(CFLAGS) -c $<
+	gcc $(C_FLAGS) -c $<
 
 # dynamic
