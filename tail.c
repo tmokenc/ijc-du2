@@ -87,13 +87,20 @@ int parse_args(struct Arguments *args, int argc, char **argv) {
             break;
         }
         
-        case 3: 
+        case 3:
         case 4: {
-            if (strcmp(argv[1], "-n") != 0) {
+            int file_idx;
+            char *num;
+            
+            if (strcmp(argv[1], "-n") == 0) { 
+                num = argv[2];
+                file_idx = 3;
+            } else if (strcmp(argv[2], "-n") == 0) {
+                num = argv[3];
+                file_idx = 1;
+            } else {
                 return UNKNOWN_PARAMETER;
             }
-            
-            char *num = argv[2];
             
             if (num[0] == '-' || num[0] == '+') {
                 args->from = num[0] == '+' ? Top : Bottom;
@@ -106,7 +113,7 @@ int parse_args(struct Arguments *args, int argc, char **argv) {
                 return INVALID_ARGUMENT;
             }
             
-            args->input = argc == 4 ? fopen(argv[3], "r") : stdin;
+            args->input = argc == 4 ? fopen(argv[file_idx], "r") : stdin;
             
             break;
         }
